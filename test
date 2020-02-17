@@ -5,6 +5,10 @@ agent any
             steps {
                 sh 'mvn --version'
             }
+            stage('Test') {
+            steps {
+                echo "Testing is Done"
+            }
         }
     }
 }
