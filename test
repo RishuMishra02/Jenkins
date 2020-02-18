@@ -4,7 +4,7 @@ pipeline {
     String (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
     text(name:'BIO',defaultValue:'sdfs',description:'Mst')    
     choice(name:'CHOICE',choices:['One','Two','Three'],description:'U can choice any ones')
-    boolean(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
+    password(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
     }
     stages {
         stage('Example Information') {
