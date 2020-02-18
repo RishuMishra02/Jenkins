@@ -10,13 +10,14 @@ pipeline {
         stage('Example Information') {
         input{
         message"Press Ok"
+        }
             steps {
                 echo "Hello ${params.PERSON}" 
                 echo "Biography: ${params.BIO}"                                
                 echo "Choice ${params.CHOICE}"
                 echo "Password ${params.PASSWORD}"
                 echo 'Build is Done'
-            }}
+            }
         }
           stage('Stage 2 : Deployed') {
             steps {
