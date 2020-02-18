@@ -1,6 +1,6 @@
 pipeline {
     agent any 
-    parameters{ll Mishra
+    parameters{
     String (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
     text(name:'BIO',defaultValue:'sdfs',discription:'Mst')
     booleanParam(name:'TOGLE', defaultValue:true, description:'Booo')
