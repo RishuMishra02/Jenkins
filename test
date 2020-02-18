@@ -2,18 +2,16 @@ pipeline {
     agent any 
     parameters{
     String (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
-    text(name:'BIO',defaultValue:'sdfs',description:'Mst')
-    
-    choice(name:'ChOICE',choices:['One','Two','Three'],description:'U can choice any ones')
+    text(name:'BIO',defaultValue:'sdfs',description:'Mst')    
+    choice(name:'CHOICE',choices:['One','Two','Three'],description:'U can choice any ones')
     boolean(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
     }
     stages {
         stage('Example Information') {
             steps {
                 echo 'Hello ${params.PERSON}' 
-                echo 'Biography: ${params.BIO}'
-                                
-                echo 'Choice ${params.ChOICE}' 
+                echo 'Biography: ${params.BIO}'                                
+                echo 'Choice ${params.CHOICE}' 
                 echo 'Password ${params.PASSWORD}'
                 echo 'Build is Done'
             }
