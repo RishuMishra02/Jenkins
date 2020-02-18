@@ -8,7 +8,7 @@ pipeline {
     boolean(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
     }
     stages {
-        stage('Example Information) {
+        stage('Example Information') {
             steps {
                 echo 'Hello ${params.PERSON}' 
                 echo 'Biography: ${params.BIO}'
