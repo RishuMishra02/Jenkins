@@ -9,10 +9,10 @@ pipeline {
     stages {
         stage('Example Information') {
             steps {
-                echo 'Hello ${params.PERSON}' 
-                echo 'Biography: ${params.BIO}'                                
-                echo 'Choice ${params.CHOICE}' 
-                echo 'Password ${params.PASSWORD}'
+                echo "Hello ${params.PERSON}" 
+                echo "Biography: ${params.BIO}"                                
+                echo "Choice ${params.CHOICE}"
+                echo "Password ${params.PASSWORD}"
                 echo 'Build is Done'
             }
         }
