@@ -3,7 +3,7 @@ pipeline {
     parameters{
     String (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
     text(name:'BIO',defaultValue:'sdfs',description:'Mst')
-    booleanParam(name:'TOGLE', defaultValue:true, description:'Booo')
+    
     choice(name:'ChOICE',choices:['One','Two','Three'],description:'U can choice any ones')
     boolean(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
     }
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Hello ${params.PERSON}' 
                 echo 'Biography: ${params.BIO}'
-                 echo 'Togle: ${params.TOGLE}'                
+                                
                 echo 'Choice ${params.ChOICE}' 
                 echo 'Password ${params.PASSWORD}'
                 echo 'Build is Done'
