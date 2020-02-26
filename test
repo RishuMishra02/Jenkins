@@ -41,7 +41,7 @@ pipeline {
                  echo"This will always run"
     }
         success {
-            mail to:"er.rahulmishra02@gmail.com",
+          
             subject:"Maven build succeeded",
             echo'This will run only if successful'
     }
