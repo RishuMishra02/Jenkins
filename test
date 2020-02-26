@@ -1,6 +1,9 @@
 pipeline {
     agent any 
-    
+    option{
+    timeout(time:3,unit:SECONDS){
+    echo 'Gaya Time'
+    }
     parameters{
     string (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
     text(name:'BIO',defaultValue:'sdfs',description:'Mst')    
