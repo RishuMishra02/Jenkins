@@ -1,6 +1,6 @@
 pipeline {
     agent any 
-    option{
+    options{
     timeout(time:3,unit:SECONDS){
     echo 'Gaya Time'
     }
