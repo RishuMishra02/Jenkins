@@ -36,11 +36,9 @@ pipeline {
             steps {
                 echo 'Testing is Done' 
             }
-            {
-      timeout(time: 10, unit: 'SECONDS') 
-  }
+         
         }
-    }
+    
     post{
         always{
                  echo"This will always run"
