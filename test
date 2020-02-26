@@ -9,9 +9,9 @@ pipeline {
     }
    
     stages {
-        stage('Example Information') {
+        stage('Stage 1: Build Project') {
         input{
-        message"Select to continue Build"
+        message "Select to continue Build"
         }
             steps {
                 echo "Hello ${params.PERSON}" 
@@ -19,25 +19,18 @@ pipeline {
                 echo "Choice ${params.CHOICE}"
                 echo "Password ${params.PASSWORD}"
                 echo 'Build is Done'
-            }
+                  }
         }
-          stage('Stage 2 : Deployed') {
+          stage('Stage 2: Deployment') {
             input{
                 message "Select to continue Deployment"
                 }
             steps {
-            retry(10){
                 echo 'Deployement is Done' 
             }
-
-            
-      timeout(time: 10, unit: 'SECONDS'){ 
-      echo 'Time Gaya'
-  }
-  }
-            
+         
         }
-          stage('Stage 3 : Test') {
+          stage('Stage 3 : Testing') {
           input{
                 message "Select to continue Testing"
                 }
