@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Example Information') {
         input{
-        message"Press Ok"
+        message"Press OK"
         }
             steps {
                 echo "Hello ${params.PERSON}" 
@@ -20,11 +20,17 @@ pipeline {
             }
         }
           stage('Stage 2 : Deployed') {
+            input{
+                message "Press OK"
+                }
             steps {
                 echo 'Deployement is Done' 
             }
         }
           stage('Stage 3 : ') {
+          input{
+                message "Press OK"
+                }
             steps {
                 echo 'Testing is Done' 
             }
