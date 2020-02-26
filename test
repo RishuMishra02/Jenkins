@@ -20,17 +20,41 @@ pipeline {
             }
         }
           stage('Stage 2 : Deployed') {
-            
+            input{
+                message "Press OK"
+                }
             steps {
                 echo 'Deployement is Done' 
             }
         }
           stage('Stage 3 : ') {
-          
+          input{
+                message "Press OK"
+                }
             steps {
                 echo 'Testing is Done' 
             }
         }
     }
+    post{
+        always{
+                 echo"This will always run"
     }
-         
+        success {
+            mail to:"er.rahulmishra02@gmail.com",
+            subject:"Maven build succeeded",
+            echo'This will run only if successful'
+    }
+        failure{
+                echo 'This will run only if failed' 
+      }  
+        unstable{
+                echo 'This will run only if the run was marked as unstable'
+       } 
+        changed{
+                echo 'this will run only if the state of the Pipline has changed'
+                echo 'For example, if the pipline was previously failing but is now successful'
+       } 
+    
+    }
+}
