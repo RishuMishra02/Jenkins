@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     options {
-      timeout(time: 1, unit: 'minute') 
+      timeout(time: 1, unit: 'MINITUE') 
   }
     parameters{
     string (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
