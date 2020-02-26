@@ -33,8 +33,8 @@ pipeline {
             retry(10){
             echo 'Gaya Time'
             }
-            {
-      timeout(time: 10, unit: 'SECONDS') 
+            
+      timeout(time: 10, unit: 'SECONDS'){ 
   }
   }
             
