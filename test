@@ -1,15 +1,19 @@
 pipeline {
     agent any 
+    options {
+      timeout(time: 1, unit: 'HOURS') 
+  }
     parameters{
     string (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
     text(name:'BIO',defaultValue:'sdfs',description:'Mst')    
     choice(name:'CHOICE',choices:['One','Two','Three'],description:'U can choice any ones')
     password(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
     }
+   
     stages {
         stage('Example Information') {
         input{
-        message"Press OK"
+        message"Select to continue Build"
         }
             steps {
                 echo "Hello ${params.PERSON}" 
@@ -21,15 +25,15 @@ pipeline {
         }
           stage('Stage 2 : Deployed') {
             input{
-                message "Press OK"
+                message "Select to continue Deployment"
                 }
             steps {
                 echo 'Deployement is Done' 
             }
         }
-          stage('Stage 3 : ') {
+          stage('Stage 3 : Test') {
           input{
-                message "Press OK"
+                message "Select to continue Testing"
                 }
             steps {
                 echo 'Testing is Done' 
