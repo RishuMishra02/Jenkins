@@ -28,11 +28,15 @@ pipeline {
             steps {
                 echo 'Deployement is Done' 
             }
-           
+           steps {
+           retry(10){
+                echo 'Time Gya' 
+            } 
             
       timeout(time: 10, unit: 'SECONDS'){ 
+      echo "Time Gaya"
   }
-  
+  }
             
         }
           stage('Stage 3 : Test') {
