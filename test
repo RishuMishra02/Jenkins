@@ -26,15 +26,13 @@ pipeline {
                 message "Select to continue Deployment"
                 }
             steps {
+            retry(10){
                 echo 'Deployement is Done' 
             }
-           steps {
-           retry(10){
-                echo 'Time Gya' 
-            } 
+
             
       timeout(time: 10, unit: 'SECONDS'){ 
-      echo "Time Gaya"
+      echo 'Time Gaya'
   }
   }
             
