@@ -1,3 +1,4 @@
+currentBuild.displayName="Jenkins Tut-#"+currentBuild.number
 pipeline {
     agent any 
     options{
