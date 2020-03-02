@@ -19,7 +19,7 @@ pipeline {
         }
             steps {
              script {
-                    currentBuild.displayName = "The name."
+                    currentBuild.displayName = "The"
                     currentBuild.description = "The best description."
                 }
                
