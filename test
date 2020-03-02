@@ -22,11 +22,7 @@ pipeline {
                     currentBuild.displayName = "The name."
                     currentBuild.description = "The best description."
                 }
-                echo "Hello ${params.PERSON}" 
-                echo "Biography: ${params.BIO}"                                
-                echo "Choice ${params.CHOICE}"
-                echo "Password ${params.PASSWORD}"
-                echo 'Build is Done'
+               
                   }
         }
           stage('Stage 2: Deployment') {
