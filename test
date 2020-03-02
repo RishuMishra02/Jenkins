@@ -1,8 +1,8 @@
-currentBuild.displayName="Rahul -#"+currentBuild.number
+currentBuild.displayName="Rahul #"+currentBuild.number
 pipeline {
     agent any 
     options{
-    timeout(time:3,unit:'SECONDS')
+    timeout(time:13,unit:'SECONDS')
    
     }
     parameters{
