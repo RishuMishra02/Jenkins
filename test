@@ -1,4 +1,4 @@
-
+currentBuild.displayName="Rahul -#"+currentBuild.number
 pipeline {
     agent any 
     options{
@@ -18,10 +18,11 @@ pipeline {
         message "Select to continue Build"
         }
             steps {
-             script {
-                    currentBuild.displayName = "The"
-                    currentBuild.description = "The best description."
-                }
+             echo "Hello ${params.PERSON}" 
+                echo "Biography: ${params.BIO}"                                
+                echo "Choice ${params.CHOICE}"
+                echo "Password ${params.PASSWORD}"
+                echo 'Build is Done'
                
                   }
         }
