@@ -18,7 +18,7 @@ pipeline {
 
     }}
             steps {
-                echo "Hello ${params.PERSON}, Nice to meet u" 
+                echo "Hello ${PERSON}, Nice to meet u" 
                
                 echo 'Build is Done'               
                   }
