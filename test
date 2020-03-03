@@ -5,12 +5,7 @@ pipeline {
     timeout(time:13,unit:'SECONDS')
    
     }
-    parameters{
-    string (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
-    text(name:'BIO',defaultValue:'sdfs',description:'Mst')    
-    choice(name:'CHOICE',choices:['One','Two','Three'],description:'U can choice any ones')
-    password(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
-    }
+   
    
     stages {
         stage('Stage 1: Build Project') {
@@ -18,7 +13,12 @@ pipeline {
         message "Should we continue ?"
         ok "YES, we should"
         submitter "Rahul, Ashish"
-        }
+        } parameters{
+    string (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
+    text(name:'BIO',defaultValue:'sdfs',description:'Mst')    
+    choice(name:'CHOICE',choices:['One','Two','Three'],description:'U can choice any ones')
+    password(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
+    }
             steps {
                 echo "Hello ${params.PERSON}" 
                 echo "Biography: ${params.BIO}"                                
