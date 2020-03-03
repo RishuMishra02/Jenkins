@@ -15,15 +15,11 @@ pipeline {
         submitter "Rahul, Ashish"
          parameters{
     string (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
-    text(name:'BIO',defaultValue:'sdfs',description:'Mst')    
-    choice(name:'CHOICE',choices:['One','Two','Three'],description:'U can choice any ones')
-    password(name:'PASSWORD', defaultValue:'SECRET',description:'Kon khayega murgi')
+
     }}
             steps {
-                echo "Hello ${params.PERSON}" 
-                echo "Biography: ${params.BIO}"                                
-                echo "Choice ${params.CHOICE}"
-                echo "Password ${params.PASSWORD}"
+                echo "Hello ${params.PERSON}, Nice to meet u" 
+               
                 echo 'Build is Done'               
                   }
         }
