@@ -16,6 +16,7 @@ pipeline {
         stage('Stage 1: Build Project') {
         input{
         message "Select to continue Build"
+        ok "YES, we should"
         }
             steps {
                 echo "Hello ${params.PERSON}" 
