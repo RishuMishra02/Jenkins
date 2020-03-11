@@ -13,6 +13,7 @@ pipeline {
         input{
         message "Should we continue ?"
         ok "YES, we should"
+        id "coreImageTags"
         submitter "Rahul, Ashish"
          parameters{
     string (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
@@ -20,7 +21,7 @@ pipeline {
     }}
             steps {
                 echo "Hello ${PERSON}, Nice to meet u" 
-               
+               echo ("Image tags: "+coreImageTags)
                 echo 'Build is Done'               
                   }
         }
