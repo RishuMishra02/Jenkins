@@ -2,13 +2,17 @@ currentBuild.displayName="Rahul #"+currentBuild.number
 pipeline {
     agent any 
     options{
-    timeout(time:13,unit:'SECONDS')
+    timeout(time:53,unit:'SECONDS')
    
     }
    
    
     stages {
         stage('Stage 1: Build Project') {
+            options{
+    timeout(time:6,unit:'SECONDS')
+   
+    }
         input{
         message "Should we continue ?"
         ok "YES, we should"
