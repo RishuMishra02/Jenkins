@@ -11,8 +11,8 @@ pipeline {
         stage('Stage 1: Build Project') {
     
         input{
-        message "Should we continue ?",
-        ok "YES, we should",
+        message "Should we continue ?"
+        ok "YES, we should"
         submitter "Rahul, Ashish"
          parameters{
     string (name:'PERSON',defaultValue:'Mr. Rahul Mishra',description:'He is most perfect men')
