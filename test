@@ -21,7 +21,6 @@ pipeline {
     }}
             steps {
                 echo "Hello ${PERSON}, Nice to meet u" 
-               echo "Image tags: "+coreImageTags
                 echo 'Build is Done'               
                   }
         }
